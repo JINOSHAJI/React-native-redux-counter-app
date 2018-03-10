@@ -24,7 +24,7 @@ class Counter extends React.Component {
        </View>
 
        <View style={styles.Buttoncontainer}>
-       <Button title="Add Five" style={styles.button} color="#841584"  onPress={this.props.onDecrementCounter}/>
+       <Button title="Add Five" style={styles.button} color="#841584"  onPress={this.props.onAddFive}/>
   </View>
         </View>
     );
@@ -74,7 +74,7 @@ const mapDispatchToProps = (dispatch) =>{
  return {
      onIncrementCounter: () =>dispatch({type:actionTypes.INCREMENT_COUNT}),
      onDecrementCounter: () => dispatch(counterActions.decrementCount()) ,
-     onDecrementCounter: () => dispatch(counterActions.addNumber(5)) 
+     onAddFive: () => dispatch(counterActions.addNumber(5)) 
   }
 };
 
